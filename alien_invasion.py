@@ -55,13 +55,12 @@ class AlienInvasion:
                 self._update_aliens()
 
             self._update_screen()
-            print(self.stats.high_score)
 
     def _check_events(self):
         """Watch for keyboard and mouse events."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                self.stats.high_score
+                self.stats.saved_highscore()
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
@@ -107,6 +106,7 @@ class AlienInvasion:
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         elif event.key == pygame.K_q:
+            self.stats.save_highscore()
             sys.exit()
         elif event.key == pygame.K_SPACE:
             if not self.stats.game_active:

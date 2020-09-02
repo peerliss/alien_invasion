@@ -25,6 +25,11 @@ class GameStats:
             self.high_score = 0
             print(numbers)
 
+    def save_highscore(self):
+        filename = 'highscore.json'
+        with open(filename, 'w') as hs:
+            json.dump(self.high_score, hs)
+
     def reset_stats(self):
         """Initialize statistics that can change during the game."""
         self.ships_left = self.settings.ship_limit
