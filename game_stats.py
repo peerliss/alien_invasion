@@ -21,9 +21,9 @@ class GameStats:
         except FileNotFoundError:
             msg = f"Can’t find file: {saved_highscore}."
             print(msg)
-        else:
-            self.high_score = 0
-            print(numbers)
+        # else:
+        #     self.high_score = 0
+        #     print(numbers)
 
     def save_highscore(self):
         filename = 'highscore.json'

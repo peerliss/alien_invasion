@@ -12,7 +12,7 @@ class Settings:
         self.ship_limit = 3
 
         # Bullet Settings
-        self.bullet_width = 3000
+        self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
@@ -24,7 +24,7 @@ class Settings:
         self.speedup_scale = 1.2
 
         # How quickly the alien point values increase
-        self.score_scale = 1.5
+        self.score_scale = 1.2
 
         self.initialize_dynamic_settings()
 
