@@ -1,7 +1,6 @@
 import sys
 import pygame
 import ctypes
-import json
 from time import sleep
 
 from settings import Settings
